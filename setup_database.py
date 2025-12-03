@@ -59,6 +59,16 @@ def add_sample_data(cursor, conn):
         ("Charlie Brown", "charlie@email.com", "555-0103", "active"),
         ("Diana Prince", "diana@email.com", "555-0104", "disabled"),
         ("Eve Martinez", "eve@email.com", "555-0105", "active"),
+        ("Frank Wilson", "frank@email.com", "555-0106", "active"),
+        ("Grace Lee", "grace@email.com", "555-0107", "active"),
+        ("Henry Davis", "henry@email.com", "555-0108", "disabled"),
+        ("Ivy Chen", "ivy@email.com", "555-0109", "active"),
+        ("Jack Thompson", "jack@email.com", "555-0110", "active"),
+        ("Karen White", "karen@email.com", "555-0111", "active"),
+        ("Leo Garcia", "leo@email.com", "555-0112", "disabled"),
+        ("Maria Rodriguez", "maria@email.com", "555-0113", "active"),
+        ("Nathan Kim", "nathan@email.com", "555-0114", "active"),
+        ("Olivia Taylor", "olivia@email.com", "555-0115", "active"),
     ]
 
     # Insert customers into the database
@@ -67,12 +77,56 @@ def add_sample_data(cursor, conn):
 
     # Sample tickets
     tickets = [
-        (1, "Cannot login to my account", "open", "medium"),
-        (1, "My account is not working", "open", "high"),
+        # Customer 1 - Alice (multiple issues)
+        (1, "Cannot login to my account", "open", "high"),
+        (1, "Password reset email not received", "open", "medium"),
+        (1, "Two-factor authentication not working", "resolved", "high"),
+        
+        # Customer 2 - Bob
         (2, "Need help upgrading subscription", "in_progress", "low"),
+        (2, "Billing cycle question", "resolved", "low"),
+        
+        # Customer 3 - Charlie
         (3, "Billing issue - charged twice", "open", "high"),
+        (3, "Refund request for duplicate charge", "open", "high"),
+        
+        # Customer 4 - Diana (disabled account)
         (4, "Feature request: dark mode", "open", "low"),
+        (4, "Account reactivation request", "open", "medium"),
+        
+        # Customer 5 - Eve
         (5, "Password reset not working", "resolved", "medium"),
+        
+        # Customer 6 - Frank
+        (6, "App crashes on startup", "open", "high"),
+        (6, "Data sync issue between devices", "in_progress", "medium"),
+        
+        # Customer 7 - Grace
+        (7, "Cannot export reports to PDF", "open", "medium"),
+        
+        # Customer 8 - Henry (disabled)
+        (8, "Account was hacked", "open", "high"),
+        
+        # Customer 9 - Ivy
+        (9, "Integration with Slack not working", "in_progress", "medium"),
+        (9, "API rate limit exceeded", "open", "low"),
+        
+        # Customer 10 - Jack
+        (10, "Mobile app notification issues", "open", "low"),
+        
+        # Customer 11 - Karen
+        (11, "Cannot cancel subscription", "open", "high"),
+        (11, "Charged after cancellation", "open", "high"),
+        
+        # Customer 13 - Maria
+        (13, "Need invoice for tax purposes", "open", "medium"),
+        
+        # Customer 14 - Nathan
+        (14, "Feature request: calendar integration", "open", "low"),
+        
+        # Customer 15 - Olivia
+        (15, "Slow loading times", "in_progress", "medium"),
+        (15, "Search function not returning results", "open", "high"),
     ]
 
     # Insert tickets into the database
