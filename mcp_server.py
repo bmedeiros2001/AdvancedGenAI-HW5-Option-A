@@ -1,7 +1,7 @@
 import sqlite3
 import json
 from typing import Optional, Dict, Any, List
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 
 DB_FILE = "customer_service.db"
@@ -137,4 +137,4 @@ def get_customer_history(customer_id: int) -> List[Dict[str, Any]]:
         conn.close()
 
 if __name__ == "__main__":
-    mcp.run(host="127.0.0.1", port=8001)
+    mcp.run(transport="http", host="127.0.0.1", port=8001)
