@@ -55,7 +55,7 @@ def list_customers(status: str ="active", limit: int = 50) -> List[Dict[str, Any
 # Tool 3: update_customer
 @mcp.tool()
 def update_customer(customer_id: int, data: Dict[str, Any]) -> Dict[str, Any]:
-    allowed_fields = {"name", "email", "phone", "status"}
+    allowed_fields = {"name", "email", "phone", "status", "tier"}
     
     # Validate input
     if not data:
@@ -137,4 +137,4 @@ def get_customer_history(customer_id: int) -> List[Dict[str, Any]]:
         conn.close()
 
 if __name__ == "__main__":
-    mcp.run(transport="http", host="127.0.0.1", port=8001)
+    mcp.run(transport="sse", host="127.0.0.1", port=8001)
