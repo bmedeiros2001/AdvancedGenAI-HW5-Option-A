@@ -1,7 +1,5 @@
 # AdvancedGenAI-HW5-Option-A
 
-# Multi-Agent Customer Service System with A2A and MCP
-
 ## Overview
 
 This project implements a multi-agent customer service system that uses Agent-to-Agent (A2A) communication for coordination and the Model Context Protocol (MCP) for database access. The system consists of three specialized agents that work together to handle customer service requests.
